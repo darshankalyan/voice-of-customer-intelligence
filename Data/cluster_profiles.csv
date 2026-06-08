@@ -1,0 +1,8 @@
+cluster_name,review_count,avg_rating,avg_vader,unmet_need_rate,helpful_rate
+Coffee Aficionados,9057,4.226,0.7,0.023,0.379
+Dedicated Cat Owners,3257,4.277,0.666,0.021,0.467
+Dedicated Dog Owners,6802,4.133,0.645,0.049,0.395
+Indulgent Snack Seekers,6335,4.242,0.725,0.025,0.419
+Mainstream Food Buyers,61706,4.128,0.622,0.041,0.456
+Snack & Cooking Enthusiasts,6013,4.302,0.695,0.027,0.482
+Tea Drinkers,6831,4.395,0.72,0.02,0.444
