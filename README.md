@@ -10,7 +10,7 @@ I wanted to see what people are actually trying to get done when they buy food o
 - 3.6% of reviews (3,582) are clear unmet-need signals: negative by VADER, 2 stars or less, tagged with a job, and found helpful by 60%+ of voters.
 - Dog food stands out. Of the 7 groups K-Means found, the dog group has the highest unmet-need rate (4.9%) against 2.0% to 2.7% for tea, cat, coffee and the snack groups. Tea drinkers are happiest at 4.40 stars.
 - Reviews are more likely to be rated helpful when the text and the stars agree. The helpfulness model reaches ROC-AUC 0.827 on a held-out 20%.
-- Unmet-need rates climbed from 0.6% to 2.3% in 2005 to 3.3% to 5.7% at the 2010 or 2011 peak for the four biggest jobs. Stars and VADER agree on sentiment 79.5% of the time.
+- For the four biggest jobs, unmet-need rates climbed from 0.6% to 2.3% in 2005 to 3.3% to 5.7% at the 2010 or 2011 peak. Stars and VADER agree on sentiment 79.5% of the time.
 
 ![Clusters and sentiment](Visuals/cluster_analysis.png)
 ![What makes a review helpful](Visuals/helpfulness_model.png)
@@ -35,12 +35,21 @@ I wanted to see what people are actually trying to get done when they buy food o
 - The helpfulness model ranks better than it classifies: it catches 79% of not-helpful reviews, but only 16% of its not-helpful calls are right. Read the coefficient directions, not their sizes.
 - This is descriptive. It doesn't say why ratings moved.
 
+**Two label slips in the notebook's own charts** (the notebook is left as it was run):
+- The elbow plot is labeled "Chosen K=6", but the model uses K=7. The corrected chart is `Visuals/elbow_plot.png`.
+- The trend chart's y-axis says "Negative Review %", but it plots the unmet-need rate. `Visuals/trend_analysis.png` has the right label.
+
 ## Files
 
 - `JTBD.ipynb`: the full analysis, written for Colab
 - `Data/`: the five CSVs the notebook exports
-- `Visuals/`: the charts
+- `Visuals/`: the charts, plus the elbow plot and word clouds (the word cloud titles show blank boxes where an emoji font was missing)
 
 ## Run it
 
 Download `Reviews.csv` from Kaggle (Amazon Fine Food Reviews), put it in Drive at `MyDrive/JTBD/Reviews.csv`, open the notebook in Colab and run it top to bottom. The LDA cell is the slow one.
+
+<!--
+Power BI dashboard: add a screenshot as Visuals/dashboard.png, then remove the comment markers around the line below.
+![Power BI dashboard](Visuals/dashboard.png)
+-->
